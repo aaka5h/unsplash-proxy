@@ -1,0 +1,23 @@
+{
+  "name": "unsplash-proxy",
+  "version": "1.0.0",
+  "description": "proxy for unsplash application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "unsplash",
+    "proxy"
+  ],
+  "author": "aakash",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "http-proxy": "^1.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
