@@ -18,7 +18,7 @@ const proxyUtil = function (req, res) {
       protocol: "https:",
       host: "api.unsplash.com",
     },
-    changeOrigin: true
+    // changeOrigin: true
   });
 }
 
