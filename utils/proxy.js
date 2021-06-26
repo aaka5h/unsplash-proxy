@@ -2,6 +2,7 @@ const httpProxy = require("http-proxy");
 const proxy = httpProxy.createProxyServer({});
 
 proxy.on("error", function (err, req, res) {
+  console.error(err);
   res.writeHead(500, {
     "Content-Type": "text/json",
   });
