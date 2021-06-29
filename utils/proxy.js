@@ -1,6 +1,8 @@
 const httpProxy = require("http-proxy");
 const proxy = httpProxy.createProxyServer({
-  secure: true
+  secure: true,
+  hostRewrite: true,
+  autoRewrite: true,
 });
 
 proxy.on("error", function (err, req, res) {
@@ -18,7 +20,7 @@ proxy.on("proxyReq", function (proxyReq, req, res, options) {
 const proxyUtil = function (req, res) {
   proxy.web(req, res, {
     target: {
-      // protocol: "https:",
+      protocol: "https:",
       host: "api.unsplash.com",
     },
     // changeOrigin: true
